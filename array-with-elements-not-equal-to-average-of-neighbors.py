@@ -13,3 +13,5 @@ class Solution:
                 ans.append(nums[r])
                 r-=1
         return 
+    
+    
