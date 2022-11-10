@@ -1,5 +1,5 @@
 class Solution(object):
-    def decodeString(self, s: str) -> str:
+    def decodeString(self, s):
         num = 0
         string = ''
         stack = []
