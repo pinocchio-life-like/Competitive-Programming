@@ -1,7 +1,7 @@
 class Solution(object):
     def evalRPN(self,tokens):
         stack=[]
-        tempo=0
+        temp=0
         for value in tokens:
             if value =="+":
                 temp=int(stack.pop()) 
