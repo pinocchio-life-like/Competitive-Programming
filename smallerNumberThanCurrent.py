@@ -1,17 +1,14 @@
-class Solution {
-    public int[] smallerNumbersThanCurrent(int[] nums) {
-        int[] output = new int[nums.length];
+class Solution(object):
+    def smallerNumbersThanCurrent(self, nums):
+        sortedNums = sorted(nums)
+        dic = {}
+        result = []
 
-        for(int i=0; i<nums.length;i++){
-            int count = 0;
-            for(int j=0; j<nums.length;j++){
-                if(nums[i]>nums[j] && i!=j){
-                    count++;
-                }
-            }
-            output[i] = count;
-        }
+        for i in range(len(sortedNums)):
+            if sortedNums[i] not in dic:
+                dic[sortedNums[i]]= i
 
-        return output;
-    }
-}
+        for i in nums:
+            result.append(dic[i])
+
+        return result
