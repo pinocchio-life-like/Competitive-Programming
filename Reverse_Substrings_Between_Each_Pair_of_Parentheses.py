@@ -16,6 +16,3 @@ class Solution(object):
             output=output+i[::-1]
         return(output)
                     
-                
-c=Solution()
-print(c.reverseParentheses("a(bcdefghijkl(mno)p)q"))
