@@ -3,7 +3,7 @@ class MyQueue:
         self.stk1 = []
         self.stk2 = []
 
-    def push(self, x: int) -> None:
+    def push(self, x):
         while len(self.stk1) != 0:
             self.stk2.append(self.stk1[-1])
             self.stk1.pop()
@@ -18,13 +18,13 @@ class MyQueue:
             
         
 
-    def pop(self) -> int:
+    def pop(self):
         if self.stk1:
             return self.stk1.pop()
 
-    def peek(self) -> int:
+    def peek(self):
         if self.stk1:
             return self.stk1[-1]
 
-    def empty(self) -> bool:
-        return not self.stk1 and not self.
+    def empty(self):
+        return not self.stk1 and not self
