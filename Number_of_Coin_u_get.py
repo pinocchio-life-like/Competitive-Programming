@@ -12,5 +12,3 @@ class Solution(object):
             piles.pop()
             # print(data)
         return(coin)
-c=Solution()
-c.maxCoins([2,4,1,2,7,8])
