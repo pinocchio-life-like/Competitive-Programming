@@ -1,19 +1,14 @@
-
-
 class Solution(object):
     def largestNumber(self,nums):
-        res=[]
-        result=""
-        for i in range(len(nums)):
-            s=[int(x)for x in str(nums[i])]
-            for i in range(len(s)):
-                res.append(s[i])
-        res.sort(reverse=True)
-       
-        for i in range(len(res)):
-            result+=str(res[i])
-        return result
+        for i, n in enumerate(nums):
+            nums[i] = str(n)
+
+        def compare(n1, n2):
+            if n1+n2 > n2+n1:
+                return -1
+            else:
+                return 1
+        nums = sorted(nums, key=cmp_to_key(compare))
+        return str(int("".join(nums)))
             
                 
-c=Solution()
-print(c.largestNumber([3,30,34,5,9]))
