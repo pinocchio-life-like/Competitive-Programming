@@ -10,4 +10,4 @@ class Solution(object):
                     res[i] = j - i
                     break
 
-        return ans
+        return res
