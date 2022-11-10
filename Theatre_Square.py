@@ -1,10 +1,13 @@
-import math
+n, m, a = map(int, input().split())
 
+if m%a==0:
+    val1=m // a
+else:
+    val1=m // a + 1
 
-class Theatre_Square:
-    def number_of_square(self, n,m,a):
-        print(math.ceil(n/a),"the rounded")
-        count= (math.ceil(n/a))*(math.ceil(m/a))
-        return count
-
-
+if n%a==0:
+    val2=n // a
+else:
+    val2=n // a + 1
+    
+print(val1*val2)
