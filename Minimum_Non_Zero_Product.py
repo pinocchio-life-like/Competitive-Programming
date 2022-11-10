@@ -4,7 +4,7 @@ class Solution:
         def Cal_Pow(base, power):
             if power == 0:
                 return 1
-            res = fastPow(base, power // 2)
+            res = Cal_Pow(base, power // 2)
             res = (res * res) % MOD
             if power % 2 == 1:
                 res *= base
