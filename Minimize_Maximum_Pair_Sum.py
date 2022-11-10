@@ -1,5 +1,3 @@
-from dataclasses import dataclass
-
 
 class Solution:
     def minPairSum(self,nums):
