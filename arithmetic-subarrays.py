@@ -1,5 +1,5 @@
-class Solution:
-    def checkArithmeticSubarrays(self, nums: List[int], l: List[int], r: List[int]) -> List[bool]:
+class Solution(object):
+    def checkArithmeticSubarrays(self, nums, l, r):
         n=len(nums)
         k=len(r)
         
