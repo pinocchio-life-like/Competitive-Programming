@@ -1,16 +1,20 @@
-
 class Solution:
-    def pancakesort(self,arr):
-        data=[]
-        for i in range(len(arr)-1):
-            for j in range(len(arr)-1):
-                for x in range(j+1,len(arr)-1):
-                    if arr[j]>arr[x]:
-                        data+=[x+1]
-                        print(arr[::-x],"the reverse")
-                        arr=arr[::-x]
-                        
-                        # arr[j],arr[x]=arr[x],arr[j]
-                    # print(data,'this is the arr',arr)
-            print(arr)
-        
+    def pancakeSort(self,A):
+        def flip(end):
+            start = 0
+            while start < end:
+                A[start], A[end] = A[end], A[start]
+                start+=1
+                end-=1
+        N = len(A)
+        output = []
+        for i in range(N-1, -1, -1):
+            max_=i
+            for j in range(i, -1, -1):
+                if A[j] > A[max_]: max_ = j
+            if max_ !=i:
+                flip(max_)
+                flip(i)
+                output.append(max_+1)
+                output.append(i+1)
+        return output
