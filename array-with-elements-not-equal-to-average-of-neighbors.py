@@ -1,5 +1,5 @@
-class Solution:
-    def rearrangeArray(self, nums: List[int]) -> List[int]:
+class Solution(object):
+    def rearrangeArray(self, nums):
         nums.sort()
         n=len(nums)
         l=0
@@ -12,6 +12,4 @@ class Solution:
             if l<=r:
                 ans.append(nums[r])
                 r-=1
-        return 
-    
-    
+        return ans
