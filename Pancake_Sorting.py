@@ -1,5 +1,3 @@
-from dataclasses import dataclass
-
 
 class Solution:
     def pancakesort(self,arr):
@@ -16,6 +14,3 @@ class Solution:
                     # print(data,'this is the arr',arr)
             print(arr)
         
-
-c=Solution()
-c.pancakesort([3,2,4,1])
